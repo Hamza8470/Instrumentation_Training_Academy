@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instrumentation Training Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+    }
+    header {
+      background-color: #e6f0ff;
+      color: #003366;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+    nav {
+      background-color: #0055a5;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 60px;
+      text-align: center;
+      background: #e6f0ff;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #555;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #003366;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    #verifySection input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+    }
+    #verifySection button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #verifySection button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="INSTRUMENTATION TRAINING ACADEMY.png" alt="Academy Logo" class="logo">
+  <div>
+    <h1>Instrumentation Training Academy</h1>
+    <p>Empowering Engineers and Technicians for a Better Future</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#courses">Courses</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#verifySection">Verify Certificate</a>
+</nav>
+
+<section class="hero">
+  <h1>Welcome to the Academy</h1>
+  <p>Learn Industrial Instrumentation, Automation, and Control Systems with our expert-led training programs.</p>
+</section>
+
+<section id="verifySection">
+    <h2>Certificate Verification</h2>
+    <input type="text" id="certificateId" placeholder="Enter Certificate ID">
+    <br>
+    <button onclick="verifyCertificate()">Verify</button>
+    <div id="result"></div>
+  </section>
+  
+<section id="courses">
+  <h2>Our Courses</h2>
+  <p>- Industrial Instrumentation Basics</p>
+  <p>- Process Control Systems</p>
+  <p>- PLC and SCADA Training</p>
+  <p>- Calibration Techniques</p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We are a leading training institute specialized in instrumentation, process automation, and industrial control systems. 
+     With hands-on training and real-world exposure, we bridge the gap between education and industry needs.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@instrumentationacademy.com</p>
+  <p>Phone: +91 98765 43210</p>
+  <p>Location: Mumbai, India</p>
+</section>
+
+<!-- Certificate Verification Section -->
+
+
+<footer>
+  &copy; 2025 Instrumentation Training Academy. All Rights Reserved.
+</footer>
+
+<script>
+function verifyCertificate() {
+    const enteredId = document.getElementById("certificateId").value.trim();
+    
+    // Dummy certificate IDs
+    const validCertificates = ["INST2025-001", "INST2025-002", "INST2025-003"];
+
+    const resultDiv = document.getElementById("result");
+
+    if (enteredId === "") {
+        resultDiv.style.color = "red";
+        resultDiv.textContent = "Please enter a Certificate ID.";
+        return;
+    }
+
+    if (validCertificates.includes(enteredId)) {
+        resultDiv.style.color = "green";
+        resultDiv.textContent = "✅ Certificate Verified Successfully!";
+    } else {
+        resultDiv.style.color = "red";
+        resultDiv.textContent = "❌ Invalid Certificate ID. Please check again.";
+    }
+}
+</script>
+
+</body>
+</html>
