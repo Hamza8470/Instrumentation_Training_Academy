@@ -22,26 +22,20 @@ const courses = [
   {
     title: 'Instrumentation Technician Foundations',
     level: 'Beginner',
+    minReq: 'High school diploma or equivalent',
     duration: '12 weeks',
-    format: 'Offline + Lab',
+    format: ['Offline + Lab', 'Online + Lab'],
     highlight: 'Learn sensor fundamentals, loop checks, and basic control systems.',
     image: 'https://picsum.photos/seed/ita-course-1/640/420'
   },
   {
     title: 'Advanced Process Control',
     level: 'Intermediate',
+    minReq: 'High school diploma or equivalent',
     duration: '10 weeks',
-    format: 'Hybrid',
+    format: ['Offline + Lab', 'Online + Lab'],
     highlight: 'Master PLC integration, SCADA workflows, and tuning strategies.',
     image: 'https://picsum.photos/seed/ita-course-2/640/420'
-  },
-  {
-    title: 'Plant Automation Specialist',
-    level: 'Advanced',
-    duration: '14 weeks',
-    format: 'Offline + Project',
-    highlight: 'Capstone projects with field devices, DCS, and safety instrumentation.',
-    image: 'https://picsum.photos/seed/ita-course-3/640/420'
   }
 ]
 
@@ -171,7 +165,7 @@ const Home = () => {
             title="Programs that move with the industry."
             subtitle="Choose a track based on your current experience, and build your skills through guided lab work."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {courses.map((course) => (
               <CourseCard key={course.title} {...course} />
             ))}

@@ -8,7 +8,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-20 bg-mist/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="font-display text-xl font-semibold text-ink">
-          TechKnow-Inspired Institute
+          Instrumentation Training Academy Patna
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
