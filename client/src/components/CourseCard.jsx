@@ -29,5 +29,4 @@ const CourseCard = ({ title, level, duration, format, highlight, image, minReq }
     </div>
   )
 }
-
 export default CourseCard

@@ -6,6 +6,7 @@ import About from './pages/About'
 import Courses from './pages/Courses'
 import CourseDetail from './pages/CourseDetail'
 import Contact from './pages/Contact'
+import Verify from './pages/Verify'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/verify" element={<Verify />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
