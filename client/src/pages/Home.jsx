@@ -26,7 +26,8 @@ const courses = [
     duration: '12 weeks',
     format: ['Offline + Lab', 'Online + Lab'],
     highlight: 'Learn sensor fundamentals, loop checks, and basic control systems.',
-    image: 'https://picsum.photos/seed/ita-course-1/640/420'
+    image: 'https://picsum.photos/seed/ita-course-1/640/420',
+    slug: 'instrumentation-technician-foundations'
   },
   {
     title: 'Advanced Process Control',
@@ -35,7 +36,8 @@ const courses = [
     duration: '10 weeks',
     format: ['Offline + Lab', 'Online + Lab'],
     highlight: 'Master PLC integration, SCADA workflows, and tuning strategies.',
-    image: 'https://picsum.photos/seed/ita-course-2/640/420'
+    image: 'https://picsum.photos/seed/ita-course-2/640/420',
+    slug: 'advanced-process-control'
   }
 ]
 
@@ -167,7 +169,9 @@ const Home = () => {
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {courses.map((course) => (
-              <CourseCard key={course.title} {...course} />
+              <Link key={course.slug} to={`/courses/${course.slug}`} className="block">
+                <CourseCard {...course} />
+              </Link>
             ))}
           </div>
         </div>
