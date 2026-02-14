@@ -53,20 +53,20 @@ const courses = [
 const testimonials = [
   {
     quote: 'The lab-focused sessions helped me transition into a plant role within two months.',
-    name: 'Aman Kumar',
+    name: 'Salik salam khan',
     role: 'Junior Instrumentation Engineer',
     avatar: 'https://picsum.photos/seed/ita-alumni-1/120/120'
   },
   {
     quote: 'Every module ended with a real inspection checklist, just like on the job.',
-    name: 'Divya Sharma',
-    role: 'Automation Trainee',
+    name: 'Ayush Sharma',
+    role: 'Instrument technician',
     avatar: 'https://picsum.photos/seed/ita-alumni-2/120/120'
   },
   {
     quote: 'The instructors kept the learning pace intense but manageable.',
-    name: 'Rahul Verma',
-    role: 'Control Room Operator',
+    name: 'Shayaque karim',
+    role: 'Instrument technician',
     avatar: 'https://picsum.photos/seed/ita-alumni-3/120/120'
   }
 ]
