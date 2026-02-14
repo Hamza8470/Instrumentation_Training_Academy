@@ -1,4 +1,13 @@
 import { Link } from 'react-router-dom'
+import heroImage from '../assets/ita_info.webp'
+import courseOneImage from '../assets/course_1.jpg'
+import courseTwoImage from '../assets/course_2.jpg'
+import galleryOne from '../assets/g1.webp'
+import galleryTwo from '../assets/g2.webp'
+import galleryThree from '../assets/g3.webp'
+import galleryFour from '../assets/g4.webp'
+import galleryFive from '../assets/g5.webp'
+import gallerySix from '../assets/g6.webp'
 import SectionTitle from '../components/SectionTitle'
 import CourseCard from '../components/CourseCard'
 import TestimonialCard from '../components/TestimonialCard'
@@ -20,24 +29,24 @@ const highlights = [
 
 const courses = [
   {
-    title: 'Instrumentation Technician Foundations',
+    title: 'Industrial Instrument Technician',
     level: 'Beginner',
     minReq: 'High school diploma or equivalent',
-    duration: '12 weeks',
+    duration: '90 days',
     format: ['Offline + Lab', 'Online + Lab'],
-    highlight: 'Learn sensor fundamentals, loop checks, and basic control systems.',
-    image: 'https://picsum.photos/seed/ita-course-1/640/420',
-    slug: 'instrumentation-technician-foundations'
+    highlight: 'Sensor basics, loop diagrams, calibration fundamentals.',
+    image: courseOneImage,
+    slug: 'industrial-instrument-technician'
   },
   {
-    title: 'Advanced Process Control',
+    title: 'QA/QC Inspector Instrumentation',
     level: 'Intermediate',
     minReq: 'High school diploma or equivalent',
-    duration: '10 weeks',
+    duration: '90 days',
     format: ['Offline + Lab', 'Online + Lab'],
-    highlight: 'Master PLC integration, SCADA workflows, and tuning strategies.',
-    image: 'https://picsum.photos/seed/ita-course-2/640/420',
-    slug: 'advanced-process-control'
+    highlight: 'PID tuning, PLC integration, SCADA practices.',
+    image: courseTwoImage,
+    slug: 'qa-qc-inspector-instrumentation'
   }
 ]
 
@@ -63,12 +72,12 @@ const testimonials = [
 ]
 
 const gallery = [
-  'https://picsum.photos/seed/ita-gallery-1/520/420',
-  'https://picsum.photos/seed/ita-gallery-2/520/420',
-  'https://picsum.photos/seed/ita-gallery-3/520/420',
-  'https://picsum.photos/seed/ita-gallery-4/520/420',
-  'https://picsum.photos/seed/ita-gallery-5/520/420',
-  'https://picsum.photos/seed/ita-gallery-6/520/420'
+  galleryOne,
+  galleryTwo,
+  galleryThree,
+  galleryFour,
+  galleryFive,
+  gallerySix,
 ]
 
 const Home = () => {
@@ -120,7 +129,7 @@ const Home = () => {
           <div className="relative flex items-center justify-center">
             <div className="float-slow w-full max-w-sm rounded-[32px] bg-white p-6 shadow-soft">
               <img
-                src="https://picsum.photos/seed/ita-hero/520/360"
+                src={heroImage}
                 alt="Instrumentation lab"
                 className="h-40 w-full rounded-3xl object-cover"
                 loading="lazy"

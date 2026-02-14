@@ -21,7 +21,7 @@ const Footer = () => {
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink">Reach Us</p>
             <ul className="mt-3 space-y-2">
-              <li>academy@institute.com</li>
+              <li>instrumentationtrainingacademy@gmail.com</li>
               <li>+91 7546062889</li>
               <li>Nohsa, Phulwari Sharif, Patna, Bihar</li>
               <li className="pt-2">

@@ -1,27 +1,29 @@
 import { Link } from 'react-router-dom'
+import courseOneImage from '../assets/course_1.jpg'
+import courseTwoImage from '../assets/course_2.jpg'
 import SectionTitle from '../components/SectionTitle'
 import CourseCard from '../components/CourseCard'
 
 const courseList = [
   {
-    title: 'Instrumentation Technician Foundations',
+    title: 'Industrial Instrument Technician',
     level: 'Beginner',
     minReq: 'High school diploma or equivalent',
-    duration: '12 weeks',
+    duration: '90 days',
     format: ['Offline + Lab', 'Online + Lab'],
     highlight: 'Sensor basics, loop diagrams, calibration fundamentals.',
-    slug: 'instrumentation-technician-foundations',
-    image: 'https://picsum.photos/seed/ita-catalog-1/640/420'
+    slug: 'industrial-instrument-technician',
+    image: courseOneImage
   },
   {
-    title: 'Advanced Process Control',
+    title: 'QA/QC Inspector Instrumentation',
     level: 'Intermediate',
-    duration: '10 weeks',
+    duration: '90 days',
     minReq: 'High school diploma or equivalent',
     format: ['Offline + Lab', 'Online + Lab'],
     highlight: 'PID tuning, PLC integration, SCADA practices.',
-    slug: 'advanced-process-control',
-    image: 'https://picsum.photos/seed/ita-catalog-2/640/420'
+    slug: 'qa-qc-inspector-instrumentation',
+    image: courseTwoImage
   }
 ]
 

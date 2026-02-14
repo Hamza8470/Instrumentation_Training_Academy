@@ -1,4 +1,5 @@
 import SectionTitle from '../components/SectionTitle'
+import ceoImage from '../assets/ita_ceo.jpeg'
 
 const values = [
   {
@@ -17,20 +18,11 @@ const values = [
 
 const faculty = [
   {
-    name: 'Engr. Meera Iyer',
-    role: 'Process Instrumentation Lead',
-    image: 'https://picsum.photos/seed/ita-faculty-1/320/320'
+    name: 'Mohammed Qammar Alam',
+    role: 'Founder & Lead Instructor',
+    image: ceoImage
   },
-  {
-    name: 'Rahul Desai',
-    role: 'Automation & PLC Mentor',
-    image: 'https://picsum.photos/seed/ita-faculty-2/320/320'
-  },
-  {
-    name: 'Sneha Kulkarni',
-    role: 'Calibration Specialist',
-    image: 'https://picsum.photos/seed/ita-faculty-3/320/320'
-  }
+  
 ]
 
 const About = () => {
@@ -85,17 +77,17 @@ const About = () => {
           title="Mentors with plant-floor expertise."
           subtitle="Our instructors guide learners through real inspection routines and lab work." 
         />
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 flex justify-center">
           {faculty.map((member) => (
-            <div key={member.name} className="rounded-3xl border border-cloud bg-white p-6 text-center shadow-card">
+            <div key={member.name} className="w-full max-w-md rounded-[32px] border border-cloud bg-white p-10 text-center shadow-card">
               <img
                 src={member.image}
                 alt={member.name}
-                className="mx-auto h-28 w-28 rounded-full object-cover"
+                className="mx-auto h-36 w-36 rounded-full object-cover"
                 loading="lazy"
               />
-              <h3 className="mt-4 font-display text-xl text-ink">{member.name}</h3>
-              <p className="mt-2 text-xs uppercase tracking-[0.2em] text-slate">{member.role}</p>
+              <h3 className="mt-6 font-display text-2xl text-ink">{member.name}</h3>
+              <p className="mt-3 text-xs uppercase tracking-[0.25em] text-slate">{member.role}</p>
             </div>
           ))}
         </div>

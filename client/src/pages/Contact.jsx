@@ -1,4 +1,51 @@
+import { useState } from 'react'
+import api from '../services/api'
+
 const Contact = () => {
+    const [formState, setFormState] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        program: 'Select a program',
+        message: '',
+    })
+    const [status, setStatus] = useState({ type: 'idle', message: '' })
+
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setFormState((prev) => ({ ...prev, [name]: value }))
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+        if (!formState.email || !formState.phone) {
+            setStatus({ type: 'error', message: 'Email and mobile number are required.' })
+            return
+        }
+
+        setStatus({ type: 'loading', message: '' })
+        try {
+            await api.post('/contact/submit', {
+                name: formState.name,
+                email: formState.email,
+                phone: formState.phone,
+                program: formState.program,
+                message: formState.message,
+            })
+            setStatus({ type: 'success', message: 'Thank you! Your message has been sent.' })
+            setFormState({
+                name: '',
+                email: '',
+                phone: '',
+                program: 'Select a program',
+                message: '',
+            })
+        } catch (error) {
+            const message = error.response?.data?.message || 'Failed to send your message.'
+            setStatus({ type: 'error', message })
+        }
+    }
+
     return (
         <div className="mx-auto w-full max-w-5xl px-6 py-16">
             <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr]">
@@ -10,8 +57,9 @@ const Contact = () => {
                         walkthrough.
                     </p>
                     <div className="mt-8 space-y-3 text-sm text-slate">
-                        <p>academy@institute.com</p>
-                        <p>+91 7546062889</p>
+                        <a href='mailto:instrumentationtrainingacademy@gmail.com'>instrumentationtrainingacademy@gmail.com</a>
+                        <br />
+                        <a href="tel:+917546062889">+91 7546062889</a>
                         <p>Nohsa, Phulwari Sharif, Patna, Bihar</p>
                         <div className="flex flex-wrap gap-3 pt-2">
                             <a
@@ -67,14 +115,17 @@ const Contact = () => {
                         />
                     </div>
                 </div>
-                <form className="rounded-3xl border border-cloud bg-white p-6 shadow-card">
+                <form onSubmit={handleSubmit} className="rounded-3xl border border-cloud bg-white p-6 shadow-card">
                     <div className="grid gap-4">
                         <label className="text-xs font-semibold uppercase tracking-[0.2em] text-slate">
                             Full Name
                             <input
                                 className="mt-2 w-full rounded-2xl border border-cloud px-4 py-3 text-sm"
                                 type="text"
+                                name="name"
                                 placeholder="Enter your full name"
+                                value={formState.name}
+                                onChange={handleChange}
                             />
                         </label>
                         <label className="text-xs font-semibold uppercase tracking-[0.2em] text-slate">
@@ -83,6 +134,10 @@ const Contact = () => {
                                 className="mt-2 w-full rounded-2xl border border-cloud px-4 py-3 text-sm"
                                 type="email"
                                 placeholder="Enter your email"
+                                name="email"
+                                required
+                                value={formState.email}
+                                onChange={handleChange}
                             />
                         </label>
                         <label className="text-xs font-semibold uppercase tracking-[0.2em] text-slate">
@@ -91,13 +146,21 @@ const Contact = () => {
                                 className="mt-2 w-full rounded-2xl border border-cloud px-4 py-3 text-sm"
                                 type="tel"
                                 placeholder="Enter your mobile number"
+                                name="phone"
                                 required
+                                value={formState.phone}
+                                onChange={handleChange}
                             />
                         </label>
 
                         <label className="text-xs font-semibold uppercase tracking-[0.2em] text-slate">
                             Preferred Program
-                            <select className="mt-2 w-full rounded-2xl border border-cloud px-4 py-3 text-sm">
+                            <select
+                                className="mt-2 w-full rounded-2xl border border-cloud px-4 py-3 text-sm"
+                                name="program"
+                                value={formState.program}
+                                onChange={handleChange}
+                            >
                                 <option>Select a program</option>
                                 <option>Instrumentation Technician Foundations</option>
                                 <option>QA/QC Instrumentation</option>
@@ -108,15 +171,24 @@ const Contact = () => {
                             <textarea
                                 className="mt-2 min-h-[120px] w-full rounded-2xl border border-cloud px-4 py-3 text-sm"
                                 placeholder="Tell us about your goals"
+                                name="message"
+                                value={formState.message}
+                                onChange={handleChange}
                             />
                         </label>
                     </div>
                     <button
-                        type="button"
+                        type="submit"
                         className="mt-6 w-full rounded-full bg-ink px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-mist transition hover:-translate-y-0.5"
+                        disabled={status.type === 'loading'}
                     >
-                        Send Inquiry
+                        {status.type === 'loading' ? 'Sending...' : 'Send Inquiry'}
                     </button>
+                    {status.type !== 'idle' ? (
+                        <p className={`mt-4 text-sm ${status.type === 'success' ? 'text-emerald-700' : 'text-rose-600'}`}>
+                            {status.message}
+                        </p>
+                    ) : null}
                 </form>
             </div>
         </div>
