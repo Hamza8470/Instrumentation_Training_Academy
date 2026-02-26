@@ -56,11 +56,54 @@ const Contact = () => {
                         Share your background and goals. We will map a program route and schedule a campus
                         walkthrough.
                     </p>
-                    <div className="mt-8 space-y-3 text-sm text-slate">
-                        <a href='mailto:instrumentationtrainingacademy@gmail.com'>instrumentationtrainingacademy@gmail.com</a>
-                        <br />
-                        <a href="tel:+917546062889">+91 7546062889</a>
-                        <p>Nohsa, Phulwari Sharif, Patna, Bihar</p>
+                    <div className="mt-8 space-y-4">
+                        {/* Email Card */}
+                        <a
+                            href='mailto:instrumentationtrainingacademy@gmail.com'
+                            className="flex items-center gap-4 rounded-2xl border border-cloud bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 transition hover:-translate-y-1 hover:shadow-lg"
+                        >
+                            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/20">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                            </span>
+                            <div className="flex-1">
+                                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-slate">Email</p>
+                                <p className="mt-0.5 text-sm font-medium text-ink hover:text-blue-600">instrumentationtrainingacademy@gmail.com</p>
+                            </div>
+                        </a>
+
+                        {/* Phone Card */}
+                        <a
+                            href="tel:+917546062889"
+                            className="flex items-center gap-4 rounded-2xl border border-cloud bg-gradient-to-br from-green-50 to-green-100/50 p-4 transition hover:-translate-y-1 hover:shadow-lg"
+                        >
+                            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500/20">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </span>
+                            <div className="flex-1">
+                                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-slate">Phone</p>
+                                <p className="mt-0.5 text-sm font-medium text-ink hover:text-green-600">+91 7546062889</p>
+                            </div>
+                        </a>
+
+                        {/* Address Card */}
+                        <div className="flex items-center gap-4 rounded-2xl border border-cloud bg-gradient-to-br from-amber-50 to-amber-100/50 p-4">
+                            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-amber-500/20">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </span>
+                            <div className="flex-1">
+                                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-slate">Location</p>
+                                <p className="mt-0.5 text-sm font-medium text-ink">Nohsa, Phulwari Sharif, Patna, Bihar</p>
+                            </div>
+                        </div>
+
                         <div className="flex flex-wrap gap-3 pt-2">
                             <a
                                 href="https://www.facebook.com/qamar.mallick.ita"
