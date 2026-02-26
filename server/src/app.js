@@ -7,12 +7,13 @@ const app = express();
 
 app.use(cors({
   origin: [
-    process.env.CLIENT_URL || 'http://localhost:5173',
-    "https://ita-patna.vercel.app/",
-    "https://instrumentation-training-academy.vercel.app/"
+    "http://localhost:5173",
+    "https://ita-patna.vercel.app",
+    "https://instrumentation-training-academy.vercel.app"
   ],
   credentials: true,
 }));
+
 app.use(express.json());
 
 app.get('/api/health', (req, res) => {
