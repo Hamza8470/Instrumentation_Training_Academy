@@ -23,11 +23,14 @@ const path = require("path");
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, "../../client/dist")));
 
-// Only handle non-API routes
-app.get("*", (req, res) => {
+// Fallback for React routes (Express 5 compatible)
+app.use((req, res, next) => {
   if (!req.originalUrl.startsWith("/api")) {
-    res.sendFile(path.join(__dirname, "../../client/dist/index.html"));
+    return res.sendFile(
+      path.join(__dirname, "../../client/dist/index.html")
+    );
   }
+  next();
 });
 
 module.exports = app;
