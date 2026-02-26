@@ -34,7 +34,7 @@ const Verify = () => {
 
   return (
     <div className="bg-sand">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-16 md:grid-cols-[1fr_1fr]">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-16 md:grid-cols-[1fr_1fr]">
         <div className="space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber">Verify</p>
           <h1 className="font-display text-3xl text-ink">Verify a certificate issued by the institute.</h1>

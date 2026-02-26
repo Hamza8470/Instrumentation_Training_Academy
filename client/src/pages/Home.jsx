@@ -85,7 +85,7 @@ const Home = () => {
     <div>
       <section className="relative overflow-hidden bg-mist">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(14,165,160,0.15),_transparent_55%)]" />
-        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 px-6 py-20 md:grid-cols-[1.2fr_0.8fr]">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-6 py-20 md:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber">
               Instrumentation Training Academy
@@ -153,7 +153,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16">
         <SectionTitle
           eyebrow="Why choose us"
           title="We train for the instrument floor, not just the classroom."
@@ -170,7 +170,7 @@ const Home = () => {
       </section>
 
       <section className="bg-sand">
-        <div className="mx-auto w-full max-w-6xl px-6 py-16">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16">
           <SectionTitle
             eyebrow="Programs"
             title="Programs that move with the industry."
@@ -186,7 +186,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16">
         <SectionTitle
           eyebrow="Gallery"
           title="A glimpse into our labs and learning spaces."
@@ -206,7 +206,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16">
         <SectionTitle
           eyebrow="Testimonials"
           title="Graduates ready for instrumentation teams."
@@ -220,7 +220,7 @@ const Home = () => {
       </section>
 
       <section className="bg-ink">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-6 py-16 text-mist md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start gap-6 px-6 py-16 text-mist md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber">Admissions Open</p>
             <h2 className="mt-4 font-display text-3xl">Plan your campus walkthrough today.</h2>

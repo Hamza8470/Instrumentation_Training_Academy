@@ -28,7 +28,7 @@ const faculty = [
 const About = () => {
   return (
     <div>
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16">
         <SectionTitle
           eyebrow="About us"
           title="A training institute built around plant-floor readiness."
@@ -54,7 +54,7 @@ const About = () => {
       </section>
 
       <section className="bg-sand">
-        <div className="mx-auto w-full max-w-6xl px-6 py-16">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16">
           <SectionTitle
             eyebrow="Values"
             title="What guides our classroom and lab culture."
@@ -71,7 +71,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16">
         <SectionTitle
           eyebrow="Faculty"
           title="Mentors with plant-floor expertise."

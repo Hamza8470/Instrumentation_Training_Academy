@@ -29,7 +29,7 @@ const courseList = [
 
 const Courses = () => {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-16">
+    <div className="mx-auto w-full max-w-7xl px-6 py-16">
       <SectionTitle
         eyebrow="Courses"
         title="Choose the right track for your instrumentation journey."
