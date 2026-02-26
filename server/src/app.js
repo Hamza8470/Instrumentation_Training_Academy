@@ -9,7 +9,8 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://ita-patna.vercel.app",
-    "https://instrumentation-training-academy.vercel.app"
+    "https://instrumentation-training-academy.vercel.app",
+    "https://ita-patna.onrender.com/api/certificates/verify"
   ],
   credentials: true,
 }));
