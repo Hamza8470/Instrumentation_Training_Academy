@@ -6,7 +6,10 @@ const contactRoutes = require('./routes/contactRoutes');
 const app = express();
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: [
+    process.env.CLIENT_URL || 'http://localhost:5173',
+    "https://ita-patna.vercel.app"
+  ],
   credentials: true,
 }));
 app.use(express.json());
@@ -15,22 +18,9 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-app.use('/api/certificates', certificateRoutes);
+app.use('/api/certificates', certificateRoutes);  
 app.use('/api/contact', contactRoutes);
 
-const path = require("path");
 
-// Serve frontend static files
-app.use(express.static(path.join(__dirname, "../../client/dist")));
-
-// Fallback for React routes (Express 5 compatible)
-app.use((req, res, next) => {
-  if (!req.originalUrl.startsWith("/api")) {
-    return res.sendFile(
-      path.join(__dirname, "../../client/dist/index.html")
-    );
-  }
-  next();
-});
 
 module.exports = app;
