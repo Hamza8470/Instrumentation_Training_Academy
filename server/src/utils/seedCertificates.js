@@ -117,6 +117,13 @@ const seedCertificates = async () => {
         courseName: 'Diploma in Industrial Instrumentation',
         issueDate: new Date('2024-08-30'),
       },
+
+      {
+        certificateNumber: 'ITA/25/22-23/43',
+        studentName: 'MD EHASHAM',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2023-08-30'),
+      },
     ];
 
     await Certificate.deleteMany({});
