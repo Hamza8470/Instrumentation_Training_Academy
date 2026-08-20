@@ -124,6 +124,55 @@ const seedCertificates = async () => {
         courseName: 'Diploma in Industrial Instrumentation',
         issueDate: new Date('2023-08-30'),
       },
+
+      {
+        certificateNumber: 'ITA/25/20-21/44',
+        studentName: 'WARIS ASHARAFI',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2021-08-30'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/20-21/45',
+        studentName: 'MD ABDULLAH ANSARI',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2021-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/20-21/46',
+        studentName: 'FAISAL IMAM',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2021-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/21-22/47',
+        studentName: 'PANKESH KUMAR',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2022-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/22-23/100',
+        studentName: 'SONU KUMAR',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2023-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/22-23/101',
+        studentName: 'MANISH KUMAR',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2023-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/22-23/150',
+        studentName: 'RUPESH KUMAR',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2024-08-20'),
+      }
     ];
 
     await Certificate.deleteMany({});
