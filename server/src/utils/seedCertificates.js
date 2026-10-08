@@ -162,7 +162,7 @@ const seedCertificates = async () => {
 
       {
         certificateNumber: 'ITA/26/22-23/101',
-        studentName: 'MANISH KUMAR',
+        studentName: 'MANISH KUMAR MAHTO',
         courseName: 'Diploma in Industrial Instrumentation',
         issueDate: new Date('2023-08-20'),
       },
@@ -172,7 +172,57 @@ const seedCertificates = async () => {
         studentName: 'RUPESH KUMAR',
         courseName: 'Diploma in Industrial Instrumentation',
         issueDate: new Date('2024-08-20'),
+      },
+      
+      {
+        certificateNumber: 'ITA/26/23-24/151',
+        studentName: 'JITENDRA KUMAR',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2024-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/23-24/152',
+        studentName: 'RANJAN KUMAR',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2024-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/23-24/153',
+        studentName: 'SURAJ KUMAR',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2024-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/23-24/154',
+        studentName: 'RAMUDESHY KUMAR MAHTO',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2024-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/21-22/48',
+        studentName: 'SANJEEV KUMAR ROY',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2022-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/21-22/49',
+        studentName: 'MD. SADAKAT',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2022-08-20'),
+      },
+
+      {
+        certificateNumber: 'ITA/26/24-25/50',
+        studentName: 'MD. ISRAR ALAM',
+        courseName: 'Diploma in Industrial Instrumentation',
+        issueDate: new Date('2025-08-20'),
       }
+
     ];
 
     await Certificate.deleteMany({});
